@@ -1,0 +1,6 @@
+#PASOS PARA INSTALAR Y EJECUTAR EL PROYECTO
+1-
+
+```bash
+
+```
