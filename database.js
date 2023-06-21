@@ -1,4 +1,5 @@
-const mysql = require('mysql2')
+const Sequelize = require('sequelize');
+const mysql = require('mysql2');
 const connection = mysql.createConnection({
     host: 'localhost',    
     user: 'luscard',    
@@ -12,4 +13,3 @@ const connection = mysql.createConnection({
       console.log('Conexión exitosa a la base de datos MySQL');
     }
   });
-  
