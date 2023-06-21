@@ -24,4 +24,6 @@ app.use('/api', require('./routes/reserva.routes'));
 
 
 // Starting the server
-app.listen(45635, () => console.log(`Server on port ${port}`));
+app.listen(`${port}`, () => {
+    console.log(`Server on port ${port}`)
+});

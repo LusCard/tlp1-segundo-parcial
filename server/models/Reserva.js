@@ -2,12 +2,12 @@
 
 const { Sequelize, Model, DataTypes } = require('sequelize');
 
-const sequelize = new Sequelize('reservas', 'luscard', '45635', {
+const sequelize = new Sequelize('reservas', 'luscard', {
     host: "localhost",
     dialect: "mysql"
 })
 
-const reservasModel = sequelize.define('users', {
+const reservasModel = sequelize.define('reservas', {
     id_reserva: {
         type: Sequelize.INTEGER,
         primaryKey: true,

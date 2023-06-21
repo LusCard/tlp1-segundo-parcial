@@ -1,4 +1,5 @@
-const ctrlReservas = require('models/Reserva')
+const ctrlReservas = require('models/Reserva');
+const { reservasModel } = require('../models/Reserva');
 
 // ==========================================
 //         Rutas para CRUD de reservas
@@ -6,16 +7,16 @@ const ctrlReservas = require('models/Reserva')
 
 // Obtener todas las reservas-------------------------------------------------
 
-async function obtenerTodasLasReservas() {
+async function GET() {
   try {
-    const reservas = await Reserva.findAll();
+    const reservas = await reservasModel.findAll();
     return reservas;
   } catch (error) {
     console.error('Error al obtener las reservas:', error);
     throw error;
   }
 }
-obtenerTodasLasReservas()
+GET()
   .then((reservas) => {
     console.log('Reservas obtenidas:', reservas);
   })
@@ -51,4 +52,4 @@ obtenerReservaPorId(1)
 
 // Eliminar una reserva de forma lógica
 
-module.exports = ctrlReservas;
+module.exports = ctrlReservas, {obtenerTodasLasReservas, obtenerReservaPorId};
